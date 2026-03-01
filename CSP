@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSP bloqueia scripts externos não autorizados -->
+    <meta http-equiv="Content-Security-Policy" 
+          content="default-src 'self'; 
+                   script-src 'self'; 
+                   style-src 'self' 'unsafe-inline'; 
+                   img-src 'self' data: https:;
+                   font-src 'self';
+                   connect-src 'self';
+                   frame-ancestors 'none';
+                   base-uri 'self';
+                   form-action 'self';">
+    
+    <!-- Proteções adicionais -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <title>Site Seguro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #0a0a0f;
+            color: #e0e0e0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .security-badge {
+            background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+            color: #0a0a0f;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .container {
+            background: #16161d;
+            border: 1px solid #2d2d3a;
+            border-radius: 16px;
+            padding: 3rem;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.75rem;
+        }
+        
+        p {
+            color: #a0a0a0;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-list {
+            text-align: left;
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .feature-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #2d2d3a;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            color: #00b894;
+            font-weight: bold;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            background: #00b894;
+            color: #0a0a0f;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .btn:hover {
+            background: #00cec9;
+            transform: translateY(-2px);
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <div class="security-badge">
+        🔒 Conexão Segura • Dados Protegidos
+    </div>
+    
+    <div class="container">
+        <h1>Bem-vindo ao Site Seguro</h1>
+        <p>Este site implementa múltiplas camadas de proteção para garantir sua privacidade.</p>
+        
+        <ul class="feature-list">
+            <li>CSP (Content Security Policy) ativo</li>
+            <li>Proteção contra clickjacking</li>
+            <li>Headers de segurança configurados</li>
+            <li>Sem rastreamento de terceiros</li>
+            <li>Conexão HTTPS obrigatória</li>
+        </ul>
+        
+        <a href="#saiba-mais" class="btn">Saiba Mais</a>
+    </div>
+</body>
+</html>
